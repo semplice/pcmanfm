@@ -1,24 +1,26 @@
-Source: pcmanfm
+Source: pcmanfm-semplice
 Section: utils
 Priority: optional
-Maintainer: Debian LXDE Maintainers <lxde-debian@lists.lxde.org>
-Uploaders:
+Maintainer: Eugenio Paolantonio (g7) <me@medesimo.eu>
+XSBC-Original-Maintainer: Debian LXDE Maintainers <lxde-debian@lists.lxde.org>
+XSBC-Original-Uploaders:
  Andrew Lee (李健秋) <ajqlee@debian.org>, Andriy Grytsenko <andrej@rep.kiev.ua>
 Build-Depends:
- debhelper (>= 9), intltool, pkg-config, libfm-gtk-dev (>= 1.2.0),
- libgtk2.0-dev
+ debhelper (>= 9), intltool, pkg-config, libfm-semplice-gtk3-dev (>= 1.2.0),
+ libgtk-3-dev
 Standards-Version: 3.9.5
 Homepage: http://pcmanfm.sourceforge.net/
-Vcs-Browser: http://git.lxde.org/gitweb/?p=debian/pcmanfm.git
-Vcs-Git: git://git.lxde.org/git/debian/pcmanfm.git
+Vcs-Browser: https://github.com/semplice/pcmanfm
+Vcs-Git: https://github.com/semplice/pcmanfm.git
 
-Package: pcmanfm
+Package: pcmanfm-semplice
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Recommends:
  gvfs-backends, gvfs-fuse,
  lxde-icon-theme | gnome-icon-theme | oxygen-icon-theme | tango-icon-theme
-Description: extremely fast and lightweight file manager
+Conflicts: pcmanfm
+Description: extremely fast and lightweight file manager (GTK+3 version)
  PCMan File Manager is a GTK+ based file manager, featuring:
  .
   * Extremly fast and lightweight
@@ -33,14 +35,14 @@ Description: extremely fast and lightweight file manager
   * Handles non-UTF-8 encoded filenames correctly
   * Provide icon view and detailed list view
   * Standard compliant (Follows FreeDesktop.org)
-  * Clean and user-friendly interface (GTK+ 2)
+  * Clean and user-friendly interface (GTK+ 3)
   * Support GVFS for auto-mount handling on removable devices
 
-Package: pcmanfm-dbg
+Package: pcmanfm-semplice-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: ${misc:Depends}, pcmanfm (= ${binary:Version})
+Depends: ${misc:Depends}, pcmanfm-semplice (= ${binary:Version})
 Description: extremely fast and lightweight file manager (debug)
  PCMan File Manager is a GTK+ based file manager. It is a primary file
  manager for the LXDE but can be used in any other desktop environment.

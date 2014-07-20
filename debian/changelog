@@ -1,3 +1,9 @@
+pcmanfm-semplice (1.2.1-1+semplice0) unstable; urgency=medium
+
+  * Initial upload for the rebranded, GTK+3, semplice rebuild.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Mon, 21 Jul 2014 00:10:47 +0200
+
 pcmanfm (1.2.1-1) unstable; urgency=low
 
   * Merging upstream version 1.2.1.

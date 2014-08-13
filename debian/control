@@ -20,6 +20,7 @@ Recommends:
  gvfs-backends, gvfs-fuse,
  lxde-icon-theme | gnome-icon-theme | oxygen-icon-theme | tango-icon-theme
 Conflicts: pcmanfm
+Replaces: pcmanfm
 Description: extremely fast and lightweight file manager (GTK+3 version)
  PCMan File Manager is a GTK+ based file manager, featuring:
  .

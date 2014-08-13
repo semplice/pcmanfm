@@ -1,3 +1,10 @@
+pcmanfm-semplice (1.2.1-2+semplice0) unstable; urgency=medium
+
+  * Added 01_add_open_as_root.patch.
+  * debian/control: add Replaces field to pcmanfm-semplice.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Wed, 13 Aug 2014 14:45:30 +0200
+
 pcmanfm-semplice (1.2.1-1+semplice0) unstable; urgency=medium
 
   * Initial upload for the rebranded, GTK+3, semplice rebuild.

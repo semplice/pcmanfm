@@ -1,3 +1,97 @@
+pcmanfm-semplice (1.2.3+git20141206-1) unstable; urgency=medium
+
+  [ safaalfulaij ]
+  * Commit from LXDE Pootle server by user safaalfulaij.: 1013 of 1210 strings translated (116 need review).
+
+  [ Recku ]
+  * Commit from LXDE Pootle server by user Recku.: 1210 of 1210 strings translated (0 need review).
+
+  [ Fitoschido ]
+  * Commit from LXDE Pootle server by user Fitoschido.: 1210 of 1210 strings translated (0 need review).
+
+  [ mbouzada ]
+  * Commit from LXDE Pootle server by user mbouzada.: 1210 of 1210 strings translated (0 need review).
+
+  [ LStranger ]
+  * Commit from LXDE Pootle server by user LStranger.: 1210 of 1210 strings translated (0 need review).
+
+  [ mbouzada ]
+  * Commit from LXDE Pootle server by user mbouzada.: 1210 of 1210 strings translated (0 need review).
+
+  [ Andriy Grytsenko ]
+  * [SF#898]Custom settings were wrong set on chdir with change show_hidden.
+  * Update NEWS file.
+  * Release 1.2.2.
+
+  [ KlemenKosir ]
+  * Commit from LXDE Pootle server by user KlemenKosir.: 865 of 1205 strings translated (92 need review).
+
+  [ Andriy Grytsenko ]
+  * Avoid unwanted config save on changing dir.
+  * accessibility: replace deprecated atk_component_get_position and fix get_image_position
+  * Fix 'make clean': it left data/ui/about.ui behind.
+  * Increase delay on restoring scroller position from 20 to 50 ms.
+
+  [ kizito ]
+  * Commit from LXDE Pootle server by user kizito.: 1284 of 1284 strings translated (0 need review).
+
+  [ Andriy Grytsenko ]
+  * Release 1.2.3.
+
+  [ JSonic ]
+  * Commit from LXDE Pootle server by user JSonic.: 1210 of 1210 strings translated (0 need review).
+
+  [ rago1975 ]
+  * Commit from LXDE Pootle server by user rago1975.: 1210 of 1210 strings translated (0 need review).
+
+  [ Pjotr ]
+  * Commit from LXDE Pootle server by user Pjotr.: 1210 of 1210 strings translated (0 need review).
+  * Commit from LXDE Pootle server by user Pjotr.: 1210 of 1210 strings translated (0 need review).
+
+  [ LStranger ]
+  * Commit from LXDE Pootle server by user LStranger.: 1210 of 3630 strings translated (0 need review).
+  * Commit from LXDE Pootle server by user LStranger.: 1210 of 3630 strings translated (0 need review).
+
+  [ armakolas ]
+  * Commit from LXDE Pootle server by user armakolas.: 1180 of 1220 strings translated (494 need review).
+  * Commit from LXDE Pootle server by user armakolas.: 1180 of 1220 strings translated (494 need review).
+  * Commit from LXDE Pootle server by user armakolas.: 1180 of 1220 strings translated (494 need review).
+  * Commit from LXDE Pootle server by user armakolas.: 1180 of 1220 strings translated (494 need review).
+
+  [ Simon Long ]
+  * #916 GTK file chooser bug causing various issues
+
+  [ Andriy Grytsenko ]
+  * Resync is.po file to fix Pootle error.
+  * Resync is.po file to fix Pootle error.
+  * Resync is.po file to fix Pootle error.
+
+  [ mbouzada ]
+  * Commit from LXDE Pootle server by user mbouzada.: 1210 of 1210 strings translated (0 need review).
+
+  [ sveinki ]
+  * Commit from LXDE Pootle server by user sveinki.: 553 of 3630 strings translated (0 need review).
+
+  [ yinghua_wang ]
+  * Commit from LXDE Pootle server by user yinghua_wang.: 1210 of 1210 strings translated (0 need review).
+
+  [ sveinki ]
+  * Commit from LXDE Pootle server by user sveinki.: 557 of 3630 strings translated (0 need review).
+
+  [ vgezer ]
+  * Commit from LXDE Pootle server by user vgezer.: 1210 of 3630 strings translated (0 need review).
+
+  [ Andriy Grytsenko ]
+  * [l10n] Resync PO files.
+
+  [ sveinki ]
+  * Commit from LXDE Pootle server by user sveinki.: 623 of 3630 strings translated (0 need review).
+
+  [ Eugenio Paolantonio (g7) ]
+  * debian/patches: refresh
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Mon, 29 Dec 2014 20:27:35 +0100
+
 pcmanfm-semplice (1.2.1-2+semplice0) unstable; urgency=medium
 
   * Added 01_add_open_as_root.patch.

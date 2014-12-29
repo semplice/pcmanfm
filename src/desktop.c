@@ -855,7 +855,8 @@ static void fm_desktop_item_accessible_get_extents(AtkComponent *component,
     *width = item->item->area.width;
     *height = item->item->area.height;
     parent_obj = gtk_widget_get_accessible(item->widget);
-    atk_component_get_position(ATK_COMPONENT(parent_obj), &l_x, &l_y, coord_type);
+    atk_component_get_extents(ATK_COMPONENT(parent_obj), &l_x, &l_y, NULL, NULL,
+                              coord_type);
     *x = l_x + item->item->area.x;
     *y = l_y + item->item->area.y;
 }
@@ -1002,13 +1003,15 @@ static void fm_desktop_item_accessible_image_get_image_position(AtkImage *image,
                                                                 AtkCoordType coord_type)
 {
     FmDesktopItemAccessible *item = FM_DESKTOP_ITEM_ACCESSIBLE(image);
+    AtkObject *parent_obj;
 
     if (item->widget == NULL)
         return;
     if (atk_state_set_contains_state(item->state_set, ATK_STATE_DEFUNCT))
         return;
 
-    atk_component_get_position(ATK_COMPONENT(image), x, y, coord_type);
+    parent_obj = gtk_widget_get_accessible(item->widget);
+    atk_component_get_extents(ATK_COMPONENT(parent_obj), x, y, NULL, NULL, coord_type);
     *x += item->item->icon_rect.x - item->item->area.x;
     *y += item->item->icon_rect.y - item->item->area.y;
 }
@@ -5607,10 +5610,10 @@ void fm_desktop_preference(GtkAction *act, FmDesktop *desktop)
                          G_CALLBACK(on_desktop_folder_set_toggled), data->chooser);
         /* the desktop folder chooser dialog */
         if (desktop->model)
-            path_str = fm_path_to_str(fm_folder_model_get_folder_path(desktop->model));
+            path_str = fm_path_to_uri(fm_folder_model_get_folder_path(desktop->model));
         else
-            path_str = fm_path_to_str(fm_path_get_desktop());
-        gtk_file_chooser_set_filename(data->chooser, path_str);
+            path_str = fm_path_to_uri(fm_path_get_desktop());
+        gtk_file_chooser_set_current_folder_uri(data->chooser, path_str);
         g_free(path_str);
         g_signal_connect(data->chooser, "file-set", G_CALLBACK(on_desktop_folder_set), data);
         g_signal_connect(data->chooser, "selection-changed", G_CALLBACK(on_desktop_folder_set), data);

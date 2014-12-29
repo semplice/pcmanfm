@@ -36,7 +36,7 @@ Index: pcmanfm/src/main-win.c
  static void on_open_in_terminal(GtkAction* act, FmMainWin* win);
  /*static void on_open_as_root(GtkAction* act, FmMainWin* win);*/
  #if FM_CHECK_VERSION(1, 0, 2)
-@@ -1191,6 +1192,20 @@ static void on_key_nav_list(GtkAction* a
+@@ -1189,6 +1190,20 @@ static void on_key_nav_list(GtkAction* a
      gtk_window_present(GTK_WINDOW(key_nav_list_dlg));
  }
  

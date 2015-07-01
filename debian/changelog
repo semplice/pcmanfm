@@ -1,3 +1,32 @@
+pcmanfm-semplice (1.2.3+git20150618-1) unstable; urgency=medium
+
+  [ wwycheuk ]
+  * Commit from LXDE Pootle server by user wwycheuk.: 1100 of 1210 strings translated (84 need review).
+
+  [ LXDE Pootle ]
+  * Automatic commit from Pootle 2.7.0a1
+
+  [ Andriy Grytsenko ]
+  * [SF#943] Add single instance options cleanup that may affect next call.
+  * [SF#948] Fix status text after folder update when there are selected files in the folder.
+  * [SF#951] Force desktop background repaint after style change.
+  * Rewrite previous commit - we should never repaint desktop on style change.
+  * A little fix over previous commit - color was unparseable by GTK+ 3.0.
+  * Fix about dialog for GTK+ >= 3.10, patch from Mamoru TASAKA.
+  * [SF#958] Enforce desktop font update on the desktop resize with GTK+ 3.0.
+  * [SF#927] Delay items layout to after desktop widget realizing.
+
+  [ LXDE Pootle ]
+  * Automatic commit from Pootle 2.7.0a1
+
+  [ Andriy Grytsenko ]
+  * [SF#963] Fix item borders calculations when matching to pointer position.
+  * Fix forwarding events to root window, it could get unpaired events.
+  * Fix crash on too fast folder change with focus_previous=1.
+  * [SF#929] Fix stuck tooltip after click on the item.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Wed, 01 Jul 2015 17:42:30 +0200
+
 pcmanfm-semplice (1.2.3+git20141206-2) unstable; urgency=medium
 
   * Do not ship the Desktop preferences desktop file.

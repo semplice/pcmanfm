@@ -1,6 +1,26 @@
 * Workarounded a bug in gtk_file_chooser_set_file() function (patch from
     Simon Long).
 
+* Fixed single instance options cleanup that might affect next call.
+
+* Fixed wrong update of status text after folder update when there are
+    selected files in the folder.
+
+* Disabled using desktop background from the GTK+ style since there is
+    own color setting and changing the style may repaint the desktop.
+
+* Enforced desktop font update on the desktop resize with GTK+ 3.0.
+
+* Fixed items layout order to never be tried before desktop is realized.
+
+* Fixed item borders calculations when matching to pointer position.
+
+* Fixed forwarding events to root window, it could get unpaired events.
+
+* Fixed crash on too fast folder change with focus_previous=1.
+
+* Fixed stuck tooltip after click on the item.
+
 
 Changes on 1.2.3 since 1.2.2:
 

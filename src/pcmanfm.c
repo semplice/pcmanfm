@@ -614,6 +614,55 @@ gboolean pcmanfm_can_open_path_in_terminal(FmPath* dir)
     return (wd != NULL);
 }
 
+void pcmanfm_open_folder_as_root(GtkWindow* parent, FmPath* dir)
+{
+    /**
+     * Opens the given folder as root.
+     *
+     * (Re-)Implemented by Eugenio Paolantonio the 13th of August 2014
+     * using his really shitty C skills.
+    */
+
+    char** argv;
+    int argc;
+
+    char* cmd = g_strdup_printf("pkexec pcmanfm %s", fm_path_to_str(dir));
+
+    if(!g_shell_parse_argv(cmd, &argc, &argv, NULL))
+    {
+        g_free(cmd);
+        return;
+    }
+    g_free(cmd);
+
+    GError* err = NULL;
+
+    /*
+     * We don't use g_app_info_launch_app() here as we need to manually
+     * reap the child, otherwise polkit will complain [1].
+     *
+     * [1] https://bugs.launchpad.net/ubuntu/+source/unity/+bug/957641
+    */
+
+    if(!g_spawn_async(
+        NULL,
+        argv,
+        NULL,
+        G_SPAWN_SEARCH_PATH | G_SPAWN_DO_NOT_REAP_CHILD,
+        NULL,
+        NULL,
+        NULL,
+        &err
+    )) {
+        fm_show_error(parent, NULL, err->message);
+        g_error_free(err);
+    }
+
+    g_strfreev(argv);
+
+}
+
+
 void pcmanfm_open_folder_in_terminal(GtkWindow* parent, FmPath* dir)
 {
 #if !FM_CHECK_VERSION(1, 2, 0)

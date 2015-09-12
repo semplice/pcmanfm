@@ -17,6 +17,11 @@ defconf_DATA = \
 	pcmanfm.conf \
 	$(NULL)
 
+polkitconfdir=$(datadir)/polkit-1/actions
+polkitconf_DATA = \
+	org.semplice-linux.pkexec.pcmanfm.policy \
+	$(NULL)
+
 EXTRA_DIST= \
 	$(desktop_in_files) \
 	$(desktop_DATA) \

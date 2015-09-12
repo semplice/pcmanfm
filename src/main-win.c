@@ -114,6 +114,7 @@ static void on_sort_type(GtkRadioAction* act, GtkRadioAction *cur, FmMainWin* wi
 static void on_side_pane_mode(GtkRadioAction* act, GtkRadioAction *cur, FmMainWin* win);
 static void on_about(GtkAction* act, FmMainWin* win);
 static void on_key_nav_list(GtkAction* act, FmMainWin* win);
+static void on_open_as_root(GtkAction* act, FmMainWin* win);
 static void on_open_in_terminal(GtkAction* act, FmMainWin* win);
 /*static void on_open_as_root(GtkAction* act, FmMainWin* win);*/
 #if FM_CHECK_VERSION(1, 0, 2)
@@ -1192,6 +1193,20 @@ static void on_key_nav_list(GtkAction* act, FmMainWin* win)
         g_signal_connect(key_nav_list_dlg, "response", G_CALLBACK(on_key_nav_list_response), (gpointer)&key_nav_list_dlg);
     }
     gtk_window_present(GTK_WINDOW(key_nav_list_dlg));
+}
+
+static void on_open_as_root(GtkAction* act, FmMainWin* win)
+{
+    FmPath *path;
+#if FM_CHECK_VERSION(1, 0, 2)
+    path = fm_nav_history_get_nth_path(win->nav_history,
+                                fm_nav_history_get_cur_index(win->nav_history));
+    if (path)
+#else
+    const FmNavHistoryItem* item = fm_nav_history_get_cur(win->nav_history);
+    if(item && (path = item->path))
+#endif
+        pcmanfm_open_folder_as_root(GTK_WINDOW(win), path);
 }
 
 static void on_open_in_terminal(GtkAction* act, FmMainWin* win)

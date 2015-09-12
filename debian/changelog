@@ -1,3 +1,14 @@
+pcmanfm-semplice (1.2.3+git20150713-1) unstable; urgency=medium
+
+  [ Andriy Grytsenko ]
+  * [SF#971] Improve option to open folder in terminal.
+  * [SF#972] Fix incorrect file names rendering position on the desktop.
+
+  [ Eugenio Paolantonio (g7) ]
+  * [packaging] Pick the patches from this git repository's branches.
+
+ -- Eugenio Paolantonio (g7) <me@medesimo.eu>  Sat, 12 Sep 2015 13:25:18 +0200
+
 pcmanfm-semplice (1.2.3+git20150618-1) unstable; urgency=medium
 
   [ wwycheuk ]
